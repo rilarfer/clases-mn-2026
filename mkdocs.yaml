@@ -1,4 +1,4 @@
-site_name: Clases Métodos Numéricos 2025
+site_name: Clases Métodos Numéricos 2026
 
 theme:
   name: material
@@ -33,11 +33,11 @@ nav:
       - Newton-Raphson para Sistemas: newtonRaphson_sistema.md
       - Jacobiano: jacobian.md
   - Descarga:
+      - Bisección: bisect.m
       - Gauss: gauss.m
       - LUdec: LUdec.m
       - LUsol: LUsol.m
       - Choleski: choleski.m
-      - Bisección: bisect.m
       - Épsilon de Máquina: epsilon_maquina.m
       - Jacobiano: jacobian.m
       - Newton-Raphson Segura: newtonRaphson_segura.m
@@ -62,10 +62,10 @@ extra:
       link: https://github.com/rilarfer
       name: GitHub rilarfer
     - icon: fontawesome/solid/user
-      link: https://github.com/rilarfer/clases-mn-2025
+      link: https://github.com/rilarfer/clases-mn-2026
       name: Proyecto en GitHub
   copyright:
-    text: "© 2025 Ricardo Largaespada"
+    text: "© 2026 Ricardo Largaespada"
 plugins:
   - search
   - include-markdown

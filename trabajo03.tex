@@ -1,0 +1,150 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+
+% Paquete para el fondo en PDF
+\usepackage{eso-pic}
+
+% Comando para insertar el fondo en la primera página
+% (Si quieres que aparezca en todas las páginas, quita el asterisco)
+\AddToShipoutPictureBG*{%
+  \AtPageLowerLeft{%
+    % Asegúrate de tener un archivo llamado 'fondo.pdf' en la misma carpeta
+    \includegraphics[width=\paperwidth,height=\paperheight]{fondo.pdf}%
+  }%
+}
+
+\title{\textbf{Asignación: Aplicaciones de Métodos para Ecuaciones No Lineales}}
+\author{Ing. Ricardo Largaespada \\ Programa de Ingeniería de Sistemas, UNI}
+\date{Fecha de presentación: Lunes 27 de abril}
+
+\begin{document}
+
+\maketitle
+
+\section*{Resumen}
+En esta tarea, colaborarán en grupos de cinco integrantes para investigar y resolver diversos problemas relacionados con ecuaciones no lineales. A cada grupo se le asignará un problema específico de la lista de ocho que se proporciona a continuación. Su tarea será resolver el problema, analizar los hallazgos y presentar los resultados a la clase el \textbf{lunes 27 de abril}. Esta actividad les ayudará a consolidar los conceptos abordados en el módulo, especialmente el método de Müller y los sistemas de ecuaciones no lineales.
+
+\section*{Pasos para completar la tarea}
+
+\textbf{1. Formación de grupos:}
+\begin{itemize}
+    \item Organícense en grupos de cinco estudiantes.
+    \item Procuren que cada grupo tenga una combinación de habilidades (análisis matemático, programación/uso de herramientas y diseño de presentaciones).
+\end{itemize}
+
+\textbf{2. Asignación y distribución de responsabilidades:}
+\begin{itemize}
+    \item Cada grupo recibirá un problema de la lista.
+    \item Deben distribuir las funciones claramente para asegurar que la resolución manual y el análisis de convergencia sean rigurosos.
+\end{itemize}
+
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+
+\section*{Lista de Problemas Asignados}
+
+Cada grupo resolverá y presentará \textbf{uno} de los siguientes problemas:
+
+\begin{itemize}
+
+    \item \textbf{Problema 5.1 (Newton-Raphson y Divergencia)}
+    \begin{enumerate}
+        \item Use el método de Newton-Raphson en la función $f(x) = \tanh(x^2 - 9)$ comenzando con $x_0 = 3.2$.
+        \item Realice al menos cuatro iteraciones. Documente cada paso ($x$ y $f(x)$).
+        \item Analice la convergencia. Cree un gráfico y discuta por qué el método puede presentar dificultades con esta función.
+    \end{enumerate}
+
+    \vspace{0.3cm}
+    \item \textbf{Problema 5.2 (Raíces Múltiples)} \\
+    La función $f(x) = x^3 - 2x^2 - 4x + 8$ tiene una raíz doble en $x = 2$.
+    \begin{enumerate}
+        \item Resuélvala usando el método de Newton-Raphson estándar.
+        \item Resuélvala usando el método de Newton-Raphson modificado para raíces múltiples.
+        \item Compare la velocidad de convergencia desde $x_0 = 1.2$.
+    \end{enumerate}
+
+    \vspace{0.3cm}
+    \item \textbf{Problema 5.3 (Sistemas: Punto Fijo vs Newton)} \\
+    Resuelva el siguiente sistema de ecuaciones:
+    \begin{align*}
+        y &= -x^2 + x + 0.75 \\
+        y + 5xy &= x^2
+    \end{align*}
+    \begin{enumerate}
+        \item Usando iteración de punto fijo.
+        \item Usando el método de Newton-Raphson para sistemas.
+        \item Utilice $x = 1.2, y = 1.2$ como valores de referencia iniciales y compare la efectividad de ambos métodos.
+    \end{enumerate}
+
+    \vspace{0.3cm}
+    \item \textbf{Problema 5.4 (Sistemas No Lineales)} \\
+    Encuentre las raíces del sistema:
+    \begin{align*}
+        (x - 4)^2 + (y - 4)^2 &= 5 \\
+        x^2 + y^2 &= 16
+    \end{align*}
+    \begin{enumerate}
+        \item Estime gráficamente los valores iniciales de $x$ y $y$.
+        \item Refine la solución usando el método de Newton-Raphson.
+    \end{enumerate}
+
+    \vspace{0.3cm}
+    \item \textbf{Problema 5.5 (Intersección de Funciones)} \\
+    Determine la raíz positiva para el sistema:
+    \begin{align*}
+        y &= x^2 + 1 \\
+        y &= 2 \cos x
+    \end{align*}
+    Explique detalladamente el proceso de aproximación utilizado para llegar a los resultados.
+
+    \vspace{0.3cm}
+    \item \textbf{Problema 5.6 (Balance de Masa en Lago)} \\
+    Utilizando la ecuación de estado estacionario para un contaminante:
+    \[
+    0 = W - Qc - kV \sqrt{c}
+    \]
+    Con $V = 1 \times 10^6$, $Q = 1 \times 10^5$, $W = 1 \times 10^6$ y $k = 0.25$.
+    \begin{enumerate}
+        \item Reescriba la ecuación para iteración de punto fijo en las dos siguientes formas:
+        \[
+        c = \frac{W - Qc}{kV^2} \quad \text{y} \quad c = \frac{W - kV \sqrt{c}}{Q}
+        \]
+        \item Determine cuál forma de convergencia es viable en el intervalo $2 < c < 6$ y justifique mediante el criterio de la derivada.
+    \end{enumerate}
+
+    \vspace{0.3cm}
+    \item \textbf{Problema 5.7 (Método de Müller)} \\
+    Dada la función $f(x) = x^3 - 0.5x^2 + 4x - 2$:
+    \begin{enumerate}
+        \item Encuentre una raíz usando las estimaciones $x_0 = 0$, $x_1 = 1$, $x_2 = 2$.
+        \item Realice \textbf{tres iteraciones} detallando los coeficientes de la parábola aproximada.
+    \end{enumerate}
+
+    \vspace{0.3cm}
+    \item \textbf{Problema 5.8 (Müller y Raíces Complejas)} \\
+    Dada la función $f(x) = x^4 - 3x^3 + x^2 + x + 1$:
+    \begin{enumerate}
+        \item Aplique el método de Müller con las estimaciones $x_0 = 0.5$, $x_1 = 1$, $x_2 = 1.5$.
+        \item Muestre los cálculos de las primeras \textbf{dos iteraciones}, explicando a la clase el manejo del discriminante negativo para obtener raíces complejas.
+    \end{enumerate}
+
+\end{itemize}
+
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+
+\section*{Presentación de Resultados}
+\begin{itemize}
+    \item \textbf{Fecha:} Lunes 27 de abril.
+    \item \textbf{Formato:} Presentación con apoyo visual. Utilicen elementos como gráficos de funciones y tablas de iteración para que sus compañeros comprendan el comportamiento de los métodos.
+    \item \textbf{Evaluación:} Se valorará la precisión del cálculo numérico, la claridad en la explicación del método y la capacidad de análisis crítico sobre la convergencia.
+\end{itemize}
+
+\end{document}

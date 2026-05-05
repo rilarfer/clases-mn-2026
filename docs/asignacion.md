@@ -1,4 +1,15 @@
-# Problemas Propuestos
+# Problemas Propuestos - Asignación 01
+
+Los problemas asignados para esta unidad son los siguientes:
+
+- **Problema 3.2**: Resolver el sistema de ecuaciones lineales utilizando el método de Gauss.
+- **Problema 3.3**: Implementar el método de Jacobi para sistemas dispersos.
+- **Problema 3.4**: Comparar los métodos de Gauss-Seidel y SOR en términos de convergencia.
+- **Problema 3.5**: Analizar el error en la solución de sistemas mal condicionados.
+
+> 💡 *Recuerde que las soluciones deben incluir código bien documentado y análisis de resultados.*
+
+---
 
 ## 1. Gauss con múltiples vectores constantes
 
